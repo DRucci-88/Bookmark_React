@@ -2,11 +2,7 @@ import React, {useState} from "react";
 import Layout from "../../../components/common/layout";
 import {Inertia} from "@inertiajs/inertia";
 
-interface Props {
-
-}
-
-const BookmarkAddPage: React.FC<Props> = () => {
+const BookmarkAddPage: React.FC = () => {
 
   const [state, setState] = useState({
     link: '',
@@ -34,7 +30,7 @@ const BookmarkAddPage: React.FC<Props> = () => {
           <form onSubmit={handleSubmit}>
             <div className={'form-group'}>
               <label htmlFor={'link'}>Link</label>
-              <input type={"text"} className={'form-control'} name={'link'} onChange={handleChange}/>
+              <input type={"text"} className={'form-control'} name={'link'} onChange={handleChange} value={state.link}/>
             </div>
           </form>
         </div>

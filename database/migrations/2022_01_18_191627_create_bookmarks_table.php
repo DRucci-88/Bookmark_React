@@ -11,7 +11,7 @@ class CreateBookmarksTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('bookmarks', function (Blueprint $table) {
             $table->id();
@@ -20,8 +20,8 @@ class CreateBookmarksTable extends Migration
             $table->text('description')->nullable();
             $table->string('type')->nullable();
             $table->text('url');
+            $table->boolean('is_active')->default(0);
             $table->text('img_url')->nullable();
-            $table->text('img_secure_url')->nullable();
             $table->timestamps();
         });
     }
@@ -31,7 +31,7 @@ class CreateBookmarksTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('bookmarks');
     }

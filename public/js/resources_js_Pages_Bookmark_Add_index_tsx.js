@@ -106,7 +106,8 @@ var BookmarkAddPage = function BookmarkAddPage() {
     type: "text",
     className: 'form-control',
     name: 'link',
-    onChange: handleChange
+    onChange: handleChange,
+    value: state.link
   })))))));
 };
 

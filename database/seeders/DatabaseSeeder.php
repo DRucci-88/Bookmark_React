@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             'password' => \bcrypt('robert'),
         ]);
 
-        Bookmark::factory(10)->create();
+        Bookmark::factory(10)->create([
+            'is_active' => 1,
+        ]);
     }
 }
