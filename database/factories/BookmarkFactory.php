@@ -11,10 +11,12 @@ class BookmarkFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            //
+            'user_id' => 1,
+            'title' => $this->faker->word(3),
+            'url' => $this->faker->url,
         ];
     }
 }

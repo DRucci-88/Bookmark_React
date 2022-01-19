@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Bookmark;
+use Database\Factories\BookmarkFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,5 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'robert@gmail.com',
             'password' => \bcrypt('robert'),
         ]);
+
+        Bookmark::factory(10)->create();
     }
 }
