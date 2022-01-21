@@ -4,10 +4,9 @@ use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\WelcomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class,'index'])->name('index');
 
 Auth::routes();
 

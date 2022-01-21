@@ -2,6 +2,7 @@ require('./bootstrap');
 
 import React from 'react'
 import { render } from 'react-dom'
+import { Ziggy } from "./ziggy";
 
 import { InertiaApp} from "@inertiajs/inertia-react";
 

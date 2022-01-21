@@ -15,7 +15,6 @@ class BookmarkController extends Controller
     {
         $bookmarks = Bookmark::query()
             ->where('user_id', Auth::user()->id)
-            ->where('is_active', 1)
             ->orderByDesc('updated_at')
             ->get();
         return Inertia::render('Bookmark/List/index', [

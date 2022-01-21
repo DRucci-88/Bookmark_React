@@ -28,9 +28,9 @@ const BookmarkViewPage: React.FC<Props> = ({bookmark}) => {
               <div className={'card-body'}>
                 <p>URL: {bookmark.url}</p>
                 <p>{bookmark.description}</p>
-                <img src={bookmark.img_url} alt={bookmark.title}/>
-                <button className={'btn btn-primary'} onClick={handleSave}>Save</button>
+                <img src={bookmark.img_url} alt={bookmark.title} width={400}/>
               </div>
+              <button className={'btn btn-primary'} onClick={handleSave}>Save</button>
             </div>
           )}
         </div>

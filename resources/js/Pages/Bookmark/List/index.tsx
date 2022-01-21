@@ -1,5 +1,7 @@
 import React from "react";
 import Layout from "../../../components/common/layout";
+import {InertiaLink} from "@inertiajs/inertia-react";
+import route from "ziggy-js";
 
 interface Props {
   bookmarks: Array<any>
@@ -14,7 +16,12 @@ const BookmarkListPage: React.FC<Props> = ({bookmarks}) => {
             {bookmarks.length > 0 && bookmarks.map((bookmark, index) => {
               return(
                 <li className={'list-group-item'} key={index}>
-                  <p>Title: {bookmark.title}</p>
+                  <div className={'mb-3'}>
+                    <InertiaLink href={route('bookmark.view', {bookmark: bookmark.id})}>
+                      {bookmark.title}
+                    </InertiaLink>
+                  </div>
+                  <span>{bookmark.description}</span>
                 </li>
               )
             })}

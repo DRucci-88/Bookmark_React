@@ -17,13 +17,9 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Inertia\Response
-     */
-    public function index(): \Inertia\Response
+    public function index(): \Illuminate\Http\RedirectResponse
     {
-        return Inertia::render('Home/index');
+//        return Inertia::render('Home/index');
+        return redirect()->route('bookmark.index');
     }
 }
